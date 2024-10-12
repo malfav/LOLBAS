@@ -1,0 +1,55 @@
+
+**Name:** icacls.exe  
+**Description:** The icacls.exe is an advanced command line utility used to configure Access Control Lists (ACLs), Permissions, and other options in the Windows operating system.  
+**Aliases:**  
+  - **Alias:** None  
+**Author:** Microsoft Corporation  
+**Created:** 2007-01-01  
+**Commands:**  
+  - **Command:** icacls "C:\path\to\file.txt" /grant User:F  
+    **Description:** Grants full control (F) permissions to the user `User` for the file `file.txt` at the specified path.  
+    **Usecase:**  
+      - Used in administrative contexts for changing ownership of files or directories.  
+      - Modify permissions, such as granting or denying access to specific users or groups.  
+      - Take control of files when administrators need access to locked or restricted resources.  
+      - Can be used to escalate privileges by granting unauthorized users higher access levels.  
+      - Maintain persistence on compromised systems by ensuring access to critical files.  
+    **In Offensive/Post-Exploitation Context:**  
+      - Escalate privileges by taking ownership of protected files (e.g., system files).  
+      - Modify permissions to access or replace sensitive files such as password databases.  
+      - Disable security mechanisms by changing permissions on security files to evade detection.  
+    **Category:** Privileges  
+    **Privileges:** Administrative privileges  
+    **MitreID:** T1222.001  
+    **OperatingSystem:**  
+      - Windows Vista  
+      - Windows Server 2008  
+      - Windows 7  
+      - Windows Server 2008 R2  
+      - Windows 8  
+      - Windows 8.1  
+      - Windows Server 2012  
+      - Windows Server 2012 R2  
+      - Windows 10  
+      - Windows Server 2016  
+      - Windows Server 2019  
+      - Windows Server 2022  
+      - Windows 11  
+    **Tags:**  
+      - Privilege Escalation: Full Control  
+
+**Full_Path:**  
+  - **Path:** C:\Windows\System32\icacls.exe  
+
+**Detection:**  
+  - **IOC:** Event ID 4670  
+  - **Analysis:** https://attack.mitre.org/techniques/T1222/001/  
+
+**Resources:**  
+  - **Link:** [Microsoft Documentation on icacls](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/icacls)  
+  - **Link:** [Privilege Escalation with Insecure Windows Service Permissions](https://medium.com/r3d-buck3t/privilege-escalation-with-insecure-windows-service-permissions-5d97312db107)  
+  - **Link:** [MITRE ATT&CK T1222.001](https://attack.mitre.org/techniques/T1222/001/)  
+
+**Acknowledgement:**  
+  - **Person:** Diyar Saadi Ali  
+    **LinkedIn:** [Diyar Saadi](https://linkedin.com/in/diyar-saadi-ali)  
